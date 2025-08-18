@@ -1,0 +1,8 @@
+news-card-img {
+    height: 200px;
+}
+
+.news-card-img img {
+    width: 100%;
+    height: 100%;
+}
