@@ -1,0 +1,19 @@
+export function NewsCard({news}){
+    return(
+        <article className="news-card">
+
+            <div className="news-card-img">
+                <img src={news.image} alt="" />
+            </div>
+
+            <div className="news-content">
+                <h3>{news.title}</h3>
+                <p>{news.summary}</p>
+
+                <button className="btn-read">
+                    Ler mais
+                </button>
+            </div>
+        </article>
+    )
+}
