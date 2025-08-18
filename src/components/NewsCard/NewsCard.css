@@ -20,3 +20,29 @@
     border: 1px solid #e0e0e0;
     box-shadow: rgba(30, 64, 15, 0.1);
 }
+
+.news-content {
+    padding: 16px;
+}
+
+.news-content h3 {
+    margin-bottom: 9px;
+    font-size: 18px;
+}
+
+.news-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    color: #666;
+}
+
+.btn-read {
+    width: 100%;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    padding: 12px 17px;
+    border-radius: 8px;
+}
