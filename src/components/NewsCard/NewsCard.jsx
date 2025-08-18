@@ -1,3 +1,5 @@
+import "./NewsCard.css"
+
 export function NewsCard({news}){
     return(
         <article className="news-card">
