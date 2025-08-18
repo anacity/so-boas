@@ -19,6 +19,7 @@
     cursor: pointer;
     border: 1px solid #e0e0e0;
     box-shadow: rgba(30, 64, 15, 0.1);
+    transition: all 0.3s ease;
 }
 
 .news-content {
@@ -45,4 +46,13 @@
     cursor: pointer;
     padding: 12px 17px;
     border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: rgb(69, 69, 69);
+    }
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
 }
