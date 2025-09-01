@@ -5,12 +5,12 @@ export function NewsCard({news}){
         <article className="news-card">
 
             <div className="news-card-img">
-                <img src={news.image} alt="" />
+                <img src={news.imageUrl} alt="" />
             </div>
 
             <div className="news-content">
                 <h3>{news.title}</h3>
-                <p>{news.summary}</p>
+                <p>{news.description}</p>
 
                 <button className="btn-read">
                     Ler mais

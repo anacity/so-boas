@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import { NewsCard } from "../NewsCard/NewsCard"
 import "./NewsGrid.css"
 
@@ -47,16 +48,26 @@ const newsList = [
 ]
 
 export function NewsGrid(){
+    const [news, setNews] = useState([])
+
+    useEffect(() => {
+        fetch("http://10.92.199.7:3001/noticias")
+        .then((res) => res.json())
+        .then((data) => setNews(data.noticias))
+        .catch((err) => console.log("Ocorreu um erro:", err))
+    }, [])
+
+
     return (
     <div className="news-grid">
         <div className="news-header">
             <h2>Todas as noticias</h2>
-            <span>{newsList.length} noticias</span>
+            <span>{news.length} noticias</span>
         </div>
 
         <div className="news-cards">
             {
-                newsList.map((news) => (
+                news.map((news) => (
                     <NewsCard news={news}/>
                 ))
             }
