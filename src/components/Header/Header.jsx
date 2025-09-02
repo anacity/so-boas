@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./Header.css"
 
 export default function Header(){
@@ -10,7 +11,7 @@ export default function Header(){
                 </div>
 
                 <nav className="nav">
-                    <a className="nav-link" href="">Inicio</a>
+                    <Link className="nav-link" to="/">Inicio</Link>
                     <a className="nav-link" href="">Quem somos</a>
                     <a className="nav-link" href="">Politica de privacidade</a>
                 </nav>

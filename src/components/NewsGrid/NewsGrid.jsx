@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { NewsCard } from "../NewsCard/NewsCard"
 import "./NewsGrid.css"
+import { Link } from "react-router-dom"
 
 const newsList = [
     {
@@ -68,7 +69,9 @@ export function NewsGrid(){
         <div className="news-cards">
             {
                 news.map((news) => (
-                    <NewsCard news={news}/>
+                    <Link to={"news/" + news.id}>
+                        <NewsCard news={news}/>
+                    </Link>
                 ))
             }
 
