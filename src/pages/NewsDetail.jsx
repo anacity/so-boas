@@ -2,15 +2,15 @@ import { useParams } from "react-router-dom";
 import Footer from "../components/footer/Footer";
 import Header from "../components/Header/Header";
 import { useEffect, useState } from "react";
+import { api } from "../lib/axios";
 
 export function NewsDetail(){
     const { id } = useParams()
     const [news, setNews] = useState(null)
 
     useEffect(() => {
-        fetch("http://10.92.199.7:3001/noticias/" + id)
-        .then((res) => res.json())
-        .then((data) => setNews(data.noticia))
+        api.get("/noticias/" + id)
+        .then((res) => setNews(res.data.noticia))
         .catch((err) => console.log("Ocorreu um erro ao carregar a noticia", err))
     }, [])
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { NewsCard } from "../NewsCard/NewsCard"
 import "./NewsGrid.css"
 import { Link } from "react-router-dom"
+import { api } from "../../lib/axios"
 
 const newsList = [
     {
@@ -52,9 +53,8 @@ export function NewsGrid(){
     const [news, setNews] = useState([])
 
     useEffect(() => {
-        fetch("http://10.92.199.7:3001/noticias")
-        .then((res) => res.json())
-        .then((data) => setNews(data.noticias))
+        api.get("/noticias")
+        .then((res) => setNews(res.data.noticias))
         .catch((err) => console.log("Ocorreu um erro:", err))
     }, [])
 
